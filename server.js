@@ -19,7 +19,6 @@ const server = app.listen(port,() => {
 app.get('/app/', (req, res) => {
     res.status(200).end('OK')
     res.type('text/plain')
-
 })
 
 app.get('/app/flip/', (req, res) => {
@@ -49,19 +48,19 @@ function coinFlip() {
 }
 
 function coinFlips(flips) {
-    var temp = new Array();
+    var flipList = new Array();
     if (flips < 1 || typeof flips == 'undefined') {
       flips = 1;
     }
     for (var i = 0; i < flips; i++) {  
-      temp.push(coinFlip());
+      flipList.push(coinFlip());
     }
-    return temp;
+    return flipList;
 }
 
 function countFlips(array) {
-    let h = 0;
-    let t = 0;
+    var h = 0;
+    var t = 0;
     for (let i  = 0; i < array.length; i++) {
       if (array[i] == 'heads') {
         h++;
