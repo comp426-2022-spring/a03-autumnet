@@ -9,7 +9,7 @@
   "main": "server.js",
   "devDependencies": {},
   "scripts": {
-    "test": "node server.js --port=5555",
+    "test": "node server.js --port=5000",
     "start": "node server.js"
   },
   "repository": {
