@@ -45,10 +45,12 @@ app.use(function(req, res) {
     res.type("text/plain")
 })
 
+//one coin flip
 function coinFlip() {
     return Math.random() > 0.5 ? ("heads") : ("tails")
 }
 
+//multiple coin flips based on user input/endpoint
 function coinFlips(flips) {
     var flipList = new Array();
     if (flips < 1 || typeof flips == 'undefined') {
@@ -60,6 +62,7 @@ function coinFlips(flips) {
     return flipList;
 }
 
+//count number of heads and tails following multiple flips and return summary
 function countFlips(array) {
     var h = 0;
     var t = 0;
@@ -74,6 +77,7 @@ function countFlips(array) {
     return {heads: h, tails: t};
 }
 
+//user defines call with endpoint, one coin flip, results of flip and comparison to guess are returned
 function flipACoin(call) {
     let flip = coinFlip()
     let result = '';
